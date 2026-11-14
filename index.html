@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab Report Explainer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Lab Report Explainer</h1>
+    <p>Pick a patient report, see each result in plain colors, and ask simple questions.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <label for="patient">Patient</label>
+      <select id="patient" disabled>
+        <option value="">Select a patient…</option>
+      </select>
+    </section>
+
+    <div id="loading" class="msg loading" role="status" aria-live="polite" hidden>
+      <span class="spinner" aria-hidden="true"></span><span id="loading-text"></span>
+    </div>
+    <div id="error" class="msg error" role="alert" hidden></div>
+
+    <div id="urgent" class="urgent" role="alert" hidden></div>
+
+    <section class="card" id="results-card" hidden>
+      <h2>Results</h2>
+      <p id="patient-meta" class="meta"></p>
+      <div id="results" class="results"></div>
+      <ul class="legend" aria-label="Colour legend">
+        <li><i class="dot normal"></i>Normal</li>
+        <li><i class="dot abnormal"></i>Low / High</li>
+        <li><i class="dot urgent"></i>Urgent</li>
+        <li><i class="dot unknown"></i>Cannot be classified</li>
+      </ul>
+    </section>
+
+    <section class="card" id="doctor-card" hidden>
+      <h2>Questions for your doctor</h2>
+      <ul id="doctor-list" class="doctor-list"></ul>
+    </section>
+
+    <section class="card" id="ask-card" hidden>
+      <h2>Ask a question</h2>
+      <div id="samples" class="samples" aria-label="Sample questions"></div>
+      <div id="answers" class="answers" aria-live="polite"></div>
+      <form id="ask-form" class="ask-form" autocomplete="off">
+        <label for="question" class="sr">Your question</label>
+        <input id="question" type="text" maxlength="300" placeholder="Type your question…" required>
+        <button type="submit" id="send">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="disclaimer">Only a licensed doctor can diagnose.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
