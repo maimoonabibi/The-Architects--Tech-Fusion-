@@ -1,0 +1,18 @@
+patient,test,value,unit,converted value (if needed),correct status,urgent warning (yes/no),notes
+Alice Smith,Hemoglobin,13.5,g/dL,,Normal,no,Female range 12.1-15.1
+Alice Smith,White Blood Cell Count,6000,cells/mcL,,Normal,no,Reported as 'WBC' in the report. range 4500-11000
+Bob Jones,ALT,45,U/L,,Normal,no,Reported as 'SGPT' in the report. Female range 7-45; exactly on upper limit = Normal. Recorded sex is Female (do not guess from name)
+Charlie Brown,Fasting Blood Sugar,110,mg/dL,,"ASK, cannot pick range",no,Age and sex both [DATA CORRUPTED]. Ask user for both. 110 is not above the urgent limit (300)
+Diana Prince,Hemoglobin,6.5,g/dL,,Urgent,yes,Below urgent limit 7.0 g/dL; also below Female range 12.1-15.1. Warning: see a doctor today
+Diana Prince,Platelet Count,120000,cells/mcL,,Low,no,Range 150000-450000; not below urgent limit 50000
+Ethan Hunt,Fasting Blood Sugar,6.0,mmol/L,about 108 mg/dL,High,no,6.0 x 18.016 = 108.1 mg/dL; range 70-99; factor 18.016 is standard but not in the files
+Fiona Gallagher,Serum Ferritin,25,ng/mL,,cannot be classified from the files,no,No range for this test in any range sheet
+George Costanza,TSH,2.5,mIU/L,,Normal,no,Range 0.4-4.0
+Haley Dunphy,pH Level,5.5,(none),,FLAG: unsure,no,Name is just 'pH Level'. Probably Urine pH (range 4.5-8.0 -> Normal) but not stated; needs confirming
+Haley Dunphy,Protein,Negative,(none),,FLAG: unsure,no,Probably Urine Protein (range Negative -> Normal) but not stated; needs confirming
+Ian Malcolm,ALT,85,U/L,,High,no,Male range 7-55; urgent limit is 1000
+Ian Malcolm,AST,60,U/L,,High,no,Male range 8-48
+Julia Child,Cholesterol,200,mg/dL,,Normal,no,Range 125-200; exactly on upper limit = Normal
+Kevin Hart,White Blood Cell Count,12000,cells/mcL,,High,no,Reported as 'WBC' in the report. range 4500-11000
+Kevin Hart,Platelet Count,140000,cells/mcL,,Low,no,Reported as 'PLT' in the report. range 150000-450000; not urgent (limit 50000)
+Laura Croft,AST,44,U/L,,"ASK, cannot pick range",no,"Sex [NOT PROVIDED]. Male 8-48 would be Normal, Female 8-43 would be High, so sex decides the result"
